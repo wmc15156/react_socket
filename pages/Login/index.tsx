@@ -1,5 +1,5 @@
 import useInput from '@hooks/useInput';
-import { Success, Form, Error, Label, Input, LinkContainer, Button, Header } from './style';
+import { Success, Form, Error, Label, Input, LinkContainer, Button, Header } from './styles';
 import axios from 'axios';
 import React, { useCallback, useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
@@ -7,9 +7,7 @@ import useSWR from 'swr';
 import fetcher from '@hooks/fetcher';
 
 const LogIn = () => {
-  const { data, error, revalidate } = useSWR('http://localhost:3095/api/users', fetcher, {
-    dedupingInterval: 1000000,
-  });
+  const { data, error, revalidate } = useSWR('http://localhost:3095/api/users', fetcher, {});
   const [logInError, setLogInError] = useState(false);
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
