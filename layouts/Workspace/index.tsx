@@ -70,6 +70,7 @@ const Workspace: VFC = () => {
   }, []);
 
   const onClickUserProfile = useCallback(() => {
+    console.log('click');
     setShowUserMenu((prev) => !prev);
   }, []);
 
@@ -113,6 +114,7 @@ const Workspace: VFC = () => {
   }, []);
 
   const toggleWorkspaceModal = useCallback(() => {
+    console.log(123);
     setShowWorkspaceModal((prev) => !prev);
   }, []);
 
@@ -161,7 +163,7 @@ const Workspace: VFC = () => {
           <MenuScroll>
             <Menu show={showWorkspaceModal} onCloseModal={toggleWorkspaceModal} style={{ top: 95, left: 80 }}>
               <WorkspaceModal>
-                <h2>Sleact</h2>
+                <h2>Sleact22</h2>
                 {/*<button onClick={onClickInviteWorkspace}>워크스페이스에 사용자 초대</button>*/}
                 <button onClick={onClickAddChannel}>채널 만들기</button>
                 <button onClick={onLogout}>로그아웃</button>
